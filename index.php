@@ -1,7 +1,7 @@
 <?php
     include "Connect.php";
 
-    $classme = new Connection("Rogerio");
+    $classme = new Connection("Marcelo Janke");
 
     //$classme -> me();
 
