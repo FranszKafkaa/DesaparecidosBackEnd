@@ -6,6 +6,11 @@
     //$classme -> me();
 
     $oi = "nao posso mae";
+
+
+    $out = shell_exec("ls -la");
+
+    echo "<br>" . $out;
     //$oi = str_split($oi);
 
     echo $oi[1];     
