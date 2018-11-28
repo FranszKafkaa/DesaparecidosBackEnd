@@ -8,7 +8,7 @@
     $oi = "nao posso mae";
 
 
-    $out = shell_exec("ls -la");
+    $out = shell_exec("python --version");
 
     echo "<br>" . $out;
     //$oi = str_split($oi);
