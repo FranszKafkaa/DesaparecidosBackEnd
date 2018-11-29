@@ -3,7 +3,7 @@
 
     $classme = new Connection("Marcelo Janke");
 
-    //$classme -> me();
+    $classme -> me();
 
     $oi = "nao posso mae";
 
