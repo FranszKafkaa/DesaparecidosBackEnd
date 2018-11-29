@@ -1,6 +1,6 @@
 <?php
     class Connection{
-        public $link;
+        private $link;
         
         function __construct(){
 
