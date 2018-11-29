@@ -1,4 +1,4 @@
-<?php
+ <?php
     class Connection{
         private $link;
         
@@ -19,7 +19,7 @@
             $count = 0;
 
             while($linha = $res -> fetch_array()){
-                $arr[$count] = $linha['nome'];
+                $arr[$count] = $linha['nome'] ." ". $linha['dataNascimento'];
                 $count++;
             }
             echo json_encode($arr);
