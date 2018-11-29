@@ -20,7 +20,8 @@
 
             while($linha = $res -> fetch_array()){
                 $arr[$count] = $linha['nome'] 
-                ."peitos". $linha['dataNascimento'] ."peitos" .$linha['cidade'];
+                ."peitos". $linha['dataNascimento'] ."peitos" .$linha['cidade'] . 
+                "peitos" . $linha['idPessoa'];
                 $count++;
             }
             echo json_encode($arr);
@@ -28,8 +29,12 @@
 
         }
 
-        public function LoadImages(){
-            
+        public function Load_Images($id){
+            $res = $this -> link -> query("SELECT caminhoImagem FROM Imagens where idPessoa like " . $id);
+            $foto = $res -> fetch_row();
+
+            echo $foto[0];
+
         }
     }
 ?>
