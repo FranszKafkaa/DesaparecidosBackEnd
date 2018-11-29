@@ -10,7 +10,7 @@
             "usx7egblsam3bm7c","mr9tugmt9iix0e3z");
 
             if($this-> link -> connect_error){
-                echo "nao main";
+                echo "nao main " . $this-> link -> connect_error;
             }else{
                 echo "Foi";
             }
