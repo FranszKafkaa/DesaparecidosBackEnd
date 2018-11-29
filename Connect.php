@@ -9,14 +9,17 @@
             ("h2cwrn74535xdazj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
             "c7ogmojcci3nrmwp","usx7egblsam3bm7c","mr9tugmt9iix0e3z");
 
-            if($this-> link -> connect_error){
-                echo "nao main " . $this-> link -> connect_error;
-            }else{
-                echo "Foi!";
-            }
         }
     
         public function Open(){
+            $query = "SELECT * FROM Pessoa";
+
+            $res = $this-> link -> query($query);
+
+            while($linha = $res -> fetch_array()){
+                echo $linha['nome'] . "<br>";
+            }
+
             echo "Me " . $this -> name;
 
         }
