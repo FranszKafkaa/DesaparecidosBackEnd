@@ -10,7 +10,7 @@
 
     $out = shell_exec("uname");
 
-    echo "<br>" . $out;
+    //echo "<br>" . $out;
     //$oi = str_split($oi);
 
     echo $oi[1];     
