@@ -27,5 +27,9 @@
 
 
         }
+
+        public function LoadImages(){
+            
+        }
     }
 ?>
