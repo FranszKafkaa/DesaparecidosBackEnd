@@ -20,8 +20,7 @@
 
             while($linha = $res -> fetch_array()){
                 $arr[$count] = $linha['nome'] 
-                ." ". $linha['dataNascimento'] .  " " . 
-                $linha['cidade'];
+                ."peitos". $linha['dataNascimento'] ."peitos" .$linha['cidade'];
                 $count++;
             }
             echo json_encode($arr);
