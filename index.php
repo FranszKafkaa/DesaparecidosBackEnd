@@ -5,6 +5,4 @@
 
     $classme -> Open();
     
-
-    echo "<br>" . $out;
 ?>

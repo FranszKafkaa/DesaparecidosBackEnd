@@ -1,9 +1,8 @@
 <?php
     class Connection{
-        public $link, $name;
+        public $link;
         
         function __construct($name){
-            $this -> name = $name;
 
             $this -> link = new mysqli
             ("h2cwrn74535xdazj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
@@ -16,11 +15,10 @@
 
             $res = $this-> link -> query($query);
 
-            while($linha = $res -> fetch_array()){
-                echo $linha['nome'] . "<br>";
-            }
+            $linha = $res -> fetch_array();
 
-            echo "Me " . $this -> name;
+            echo json_encode($linha['nome']);
+
 
         }
     }
