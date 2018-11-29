@@ -17,6 +17,7 @@
 
             $arr = array();
             $count = 0;
+
             while($linha = $res -> fetch_array()){
                 $arr[$count] = $linha['nome'];
                 $count++;
