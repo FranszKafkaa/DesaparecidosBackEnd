@@ -5,7 +5,8 @@
         function __construct($name){
             $this -> name = $name;
 
-            $this -> link = new mysqli("h2cwrn74535xdazj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+            $this -> link = new mysqli
+            ("h2cwrn74535xdazj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
             "c7ogmojcci3nrmwp","usx7egblsam3bm7c","mr9tugmt9iix0e3z");
 
             if($this-> link -> connect_error){
