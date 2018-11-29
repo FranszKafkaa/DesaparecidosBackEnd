@@ -2,7 +2,7 @@
     class Connection{
         public $link;
         
-        function __construct($name){
+        function __construct(){
 
             $this -> link = new mysqli
             ("h2cwrn74535xdazj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
@@ -15,9 +15,13 @@
 
             $res = $this-> link -> query($query);
 
-            $linha = $res -> fetch_array();
-
-            echo json_encode($linha['nome']);
+            $arr = array();
+            $count = 0;
+            while($linha = $res -> fetch_array()){
+                $arr[$count] = $linha['nome'];
+                $count++;
+            }
+            echo json_encode($arr);
 
 
         }
