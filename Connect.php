@@ -21,7 +21,7 @@
                 $arr[$count] = $linha['nome'];
                 $count++;
             }
-            echo json_encode(utf8_encode($arr['nome']));
+            echo json_encode(utf8_encode($arr));
 
 
         }
