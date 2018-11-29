@@ -4,5 +4,7 @@
     $classme = new Connection("Marcelo Janke");
 
     $classme -> me();
-    $out = shell_exec("uname");
+    $out = shell_exec("uname -r");
+
+    echo "<br>" . $out;
 ?>
