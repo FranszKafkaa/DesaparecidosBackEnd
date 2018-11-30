@@ -13,7 +13,12 @@
             $query = "SELECT nome, dataDesaparecimento, Cidade, caminhoImagem 
             FROM Pessoa,Imagens WHERE Pessoa.idPessoa = Imagens.idPessoa;";
 
+
             $res = $this-> link -> query($query);
+            if(!$res) {
+                die("erro");
+            }
+            echo $res;
 
             $arr = array();
             $count = 0;
