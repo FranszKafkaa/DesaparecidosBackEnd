@@ -14,11 +14,9 @@
             FROM Pessoa,Imagens WHERE Pessoa.idPessoa = Imagens.idPessoa;";
 
 
-            $res = $this-> link -> query($query);
-            if(!$res) {
-                die("erro");
+            if(!$this -> link -> query($query)){
+                echo $this -> link -> error;
             }
-            echo $res;
 
             $arr = array();
             $count = 0;
