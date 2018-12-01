@@ -12,6 +12,7 @@
         public function Open(){
             $query = "SELECT nome, dataDesaparecimento, Cidade, caminhoImagem 
             FROM Pessoa,Imagens WHERE Pessoa.idPessoa = Imagens.idPessoa";
+            $res = $this -> link -> query($query);
 
             $arr = array();
             $count = 0;
