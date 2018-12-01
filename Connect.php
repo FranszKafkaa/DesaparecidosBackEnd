@@ -21,6 +21,7 @@
                 $arr[$count] = $linha['nome'] 
                 ."peitos". $linha['dataDesaparecimento'] ."peitos" .$linha['Cidade'] . 
                 "peitos" . $linha['caminhoImagem'];
+                
                 $count++;
             }
             echo json_encode($arr);
