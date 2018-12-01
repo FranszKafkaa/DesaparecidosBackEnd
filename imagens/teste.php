@@ -11,19 +11,16 @@
 			}
         	}
 		public function openMe(){
-			$Pessoas = $this -> link -> query("SELECT * From Pessoa");
+			$Pessoas = $this -> link ->query("SELECT nome, dataDesaparecimento, Cidade,".
+			"caminhoImagem FROM Pessoa,Imagens WHERE Pessoa.idPessoa = Imagens.idPessoa;");
+
 			$Arr = array();
 			$count = 0;
 
 			while($content = $Pessoas -> fetch_array()){
-				$foto = $this -> link ->
-				query("SELECT caminhoImagem From Imagens Where idPessoa LIKE ".
-				$content['idPessoa']);
-				$agoravai = $foto -> fetch_row();
-
 				//teste de alguma coisa doida
-				$Arr[$count] = $content['nome'] ." ".$content['dataDesaparecimento']
-				." ".$agoravai[0];
+				$Arr[$count] = $content['nome'] ." ".$content['dataDesaparecimento']." ".
+				$content['Cidade']. $content['caminhoImagem'];
 
 				$count++;
 			}

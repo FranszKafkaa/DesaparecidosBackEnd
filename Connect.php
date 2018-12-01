@@ -16,6 +16,8 @@
 
             if(!$this -> link -> query($query)){
                 echo $this -> link -> error;
+            }else{
+                echo "AAAAAAAA";
             }
 
             $arr = array();
