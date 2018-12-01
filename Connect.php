@@ -10,7 +10,7 @@
         }
     
         public function Open(){
-            $query = "SELECT nome, dataDesaparecimento, Cidade,idPessoa, caminhoImagem 
+            $query = "SELECT nome, dataDesaparecimento, Cidade,Pessoa.idPessoa, caminhoImagem 
             FROM Pessoa,Imagens WHERE Pessoa.idPessoa = Imagens.idPessoa";
             $res = $this -> link -> query($query);
 
