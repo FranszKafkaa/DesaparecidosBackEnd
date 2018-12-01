@@ -20,7 +20,7 @@
 			while($content = $Pessoas -> fetch_array()){
 				//teste de alguma coisa doida
 				$Arr[$count] = $content['nome'] ." ".$content['dataDesaparecimento']." ".
-				$content['Cidade']. $content['caminhoImagem'];
+				$content['Cidade']." ".$content['caminhoImagem'];
 
 				$count++;
 			}
