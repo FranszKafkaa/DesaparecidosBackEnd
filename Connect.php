@@ -19,7 +19,7 @@
 
             while($linha = $res -> fetch_array()){
                 $arr[$count] = $linha['nome'] 
-                ."peitos". $linha['dataNascimento'] ."peitos" .$linha['Cidade'] . 
+                ."peitos". $linha['dataDesaparecimento'] ."peitos" .$linha['Cidade'] . 
                 "peitos" . $linha['caminhoImagem'];
                 $count++;
             }
