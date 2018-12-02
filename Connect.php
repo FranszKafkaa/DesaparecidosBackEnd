@@ -31,7 +31,7 @@
             $res = $this -> link -> query("SELECT * FROM Pessoa WHERE 
             Pessoa.idPessoa LIKE " .$idUser);
             
-            foreach($res -> fetch_row() as $key => $value){
+            foreach($res -> fetch_array() as $key => $value){
                 echo $key ." => ". $value . "<br>";
             }
         }
