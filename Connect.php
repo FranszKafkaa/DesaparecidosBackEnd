@@ -31,13 +31,18 @@
             $res = $this -> link -> query("SELECT * FROM Pessoa WHERE 
             Pessoa.idPessoa LIKE " .$idUser);
             $count = 0;
-            
+            $Arr = array();
+
             foreach($res -> fetch_array() as $key => $value){
+
                 if($count %2 == 1){
                     echo $key ." => ". $value . "<br>";
+                    $Arr[$key] = $value;
                 }
                 $count++;
+                echo json_encode($Arr);
             }
         }
+
     }
 ?>
