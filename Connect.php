@@ -30,9 +30,13 @@
         public function GettingInfo($idUser){
             $res = $this -> link -> query("SELECT * FROM Pessoa WHERE 
             Pessoa.idPessoa LIKE " .$idUser);
+            $count = 0;
             
             foreach($res -> fetch_array() as $key => $value){
-                echo $key ." => ". $value . "<br>";
+                if($count %2 == 1){
+                    echo $key ." => ". $value . "<br>";
+                }
+                $count++;
             }
         }
     }
