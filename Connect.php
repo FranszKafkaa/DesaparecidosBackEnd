@@ -40,8 +40,9 @@
                     $Arr[$key] = $value;
                 }
                 $count++;
-                echo json_encode($Arr);
+                
             }
+            echo json_encode($Arr);
         }
 
     }
