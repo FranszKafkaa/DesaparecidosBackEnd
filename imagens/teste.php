@@ -26,8 +26,28 @@
 			}
 			echo json_encode($Arr) . "\n";
 		}
+		public function SaveMySoul($id){
+			$count = 0;
+			$arr = array();
+
+			$res = $this -> link -> query("SELECT * FROM Pessoa WHERE idPessoa like {$id}");
+
+
+			foreach($res -> fetch_array() as $key => $value){
+
+				//ignora registos onde a key e um inteiro
+				if($count %2 == 1){
+					$arr[$key] = $value;
+					echo $key ." => ". $value . "\n";
+				}
+				$count++;
+			}
+
+			unset($count);
+			echo json_encode($arr) ."\n" ;
+		}
 	}
 
 	$oi = new Connect();
-	$oi -> openMe();
+	$oi -> SaveMySoul(5);
 ?>

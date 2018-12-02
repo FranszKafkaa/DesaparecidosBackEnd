@@ -19,14 +19,21 @@
 
             while($linha = $res -> fetch_array()){
                 $arr[$count] = $linha['nome'] 
-                ."peitos". $linha['dataDesaparecimento'] ."peitos" .$linha['Cidade'] . 
+                ."peitos". $linha['dataDesaparecimento'] ."peitos" .$linha['Cidade']. 
                 "peitos" .$linha['idPessoa']."peitos". $linha['caminhoImagem'];
 
                 $count++;
             }
             echo json_encode($arr);
+        }
 
-
+        public function GettingInfo($idUser){
+            $res = $this -> link -> query("SELECT * FROM Pessoa WHERE 
+            Pessoa.idPessoa LIKE " .$idUser);
+            
+            foreach($res -> fetch_row() as $key => $value){
+                echo $key ." => ". $value . "<br>";
+            }
         }
     }
 ?>
