@@ -6,9 +6,9 @@
             		("h2cwrn74535xdazj.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
             		"c7ogmojcci3nrmwp","usx7egblsam3bm7c","mr9tugmt9iix0e3z");
 
-			if($this -> link -> connect_error){
-				echo "Nao foi " . $this -> link -> connect_error;
-			}
+                 if($this -> link -> connect_error){
+                     echo "Nao foi " . $this -> link -> connect_error;
+                 }
         	}
 		public function openMe(){
 			$Pessoas = $this -> link ->query("SELECT nome, dataDesaparecimento, Cidade,".
@@ -35,8 +35,8 @@
 
 			foreach($res -> fetch_array() as $key => $value){
 
-				//ignora registos onde a key e um inteiro
-				if($count %2 == 1){
+				//ignora registos onde a key eh um inteiro
+				if ($count %2 == 1){
 					$arr[$key] = $value;
 					echo $key ." => ". $value . "\n";
 				}
@@ -49,5 +49,5 @@
 	}
 
 	$oi = new Connect();
-	$oi -> SaveMySoul(5);
+	$oi -> SaveMySoul(4);
 ?>
