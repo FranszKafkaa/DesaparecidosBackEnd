@@ -13,7 +13,7 @@
             $query = "SELECT nome, dataDesaparecimento, 
             Cidade,Pessoa.idPessoa, caminhoImagem 
             FROM Pessoa,Imagens WHERE Pessoa.idPessoa = Imagens.idPessoa";
-            
+
             $res = $this -> link -> query($query);
 
             $arr = array();
@@ -38,12 +38,13 @@
             foreach($res -> fetch_array() as $key => $value){
 
                 if($count %2 == 1){
-                    echo $key ." => ". $value . "<br>";
                     $Arr[$key] = $value;
                 }
                 $count++;
                 
             }
+            
+            unset($count);
             echo json_encode($Arr);
         }
 
